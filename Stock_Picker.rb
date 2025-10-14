@@ -1,6 +1,6 @@
 def stock_picker(arr)
-  arr.each do |day|
-    
+  arr.each do |val|
+
   end
 end
 
