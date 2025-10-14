@@ -11,6 +11,9 @@ def stock_picker(arr)
       day_sold = max_index(adj_arr)
     end
   end
+  result << day_bought
+  result << day_sold
+  return result
 end
 
 def max_index(array)
