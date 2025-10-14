@@ -6,9 +6,9 @@ def stock_picker(arr)
     # Take the highest resulting number and store it
     # If a new iteration has a higher number replace the number
     adj_arr = arr.map { |val_map| val - val_map}
-    if max_index(adj_arr) > day_sold
+    if max_index(adj_arr)[0] > day_sold
       day_bought = index
-      day_sold = max_index(adj_arr)
+      day_sold = max_index(adj_arr)[0]
     end
   end
   result << day_bought
