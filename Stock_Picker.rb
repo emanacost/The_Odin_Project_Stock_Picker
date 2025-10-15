@@ -2,6 +2,7 @@ def stock_picker(arr)
   day = 0
   day_bought = 0
   day_sold = 0
+  result = []
   arr.each_with_index do |val, index|
     # Use map to find the diff of the current iteration to all members of the array
     # Take the highest resulting number and store it
