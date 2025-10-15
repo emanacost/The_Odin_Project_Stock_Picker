@@ -1,15 +1,17 @@
 def stock_picker(arr)
+  day = 0
   day_bought = 0
   day_sold = 0
   arr.each_with_index do |val, index|
     # Use map to find the diff of the current iteration to all members of the array
     # Take the highest resulting number and store it
     # If a new iteration has a higher number replace the number
-    adj_arr = arr.map { |val_map| val - val_map}
+    adj_arr = arr[day..arr.length].map { |val_map| val - val_map}
     if max_index(adj_arr)[0] > day_sold
       day_bought = index
       day_sold = max_index(adj_arr)[0]
     end
+    day += 1
   end
   result << day_bought
   result << day_sold
